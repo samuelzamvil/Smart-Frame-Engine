@@ -177,7 +177,7 @@
             <div class="flex items-center justify-between">
               <h3 class="card-title">Frame</h3>
               <span class="inline-flex items-center gap-1.5 text-xs"><span class="h-2 w-2 rounded-full" :class="frameDot()"></span><span x-text="frameLabel()"></span></span>
-              <button type="button" class="btn !py-0.5 !text-xs ml-auto" x-show="status && status.frame.configured" @click="checkFrame(true)" :disabled="busy.frameCheck">Check now</button>
+              <button type="button" class="btn !py-0.5 !text-xs ml-auto" x-show="status && status.frame.configured" @click="checkFrame(true)" :disabled="!!busy.frameCheck">Check now</button>
             </div>
             <template x-if="status">
               <div class="mt-3 space-y-3 text-sm">
